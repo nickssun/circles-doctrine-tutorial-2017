@@ -5,6 +5,7 @@ use Infrastructure\Authentication\Repository\FilesystemUsers;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+$entityManager = require_once __DIR__. '/../bootstrap.php';
 
 $users = new FilesystemUsers(__DIR__ . '/../data/users');
 

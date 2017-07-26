@@ -10,4 +10,4 @@ $user->login($_POST['password'], function (string $password, string $hash) : boo
 
 var_dump($user);
 
-var_dump('test00');
+//var_dump('test00');
