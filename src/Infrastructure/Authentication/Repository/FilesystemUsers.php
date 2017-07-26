@@ -19,12 +19,7 @@ final class FilesystemUsers implements Users
 
     public function has(string $emailAddress) : bool
     {
-        if(file_exists($this->directory . '/' . base64_encode($emailAddress))){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return file_exists($this->directory . '/' . base64_encode($emailAddress));
     }
 
     public function get(string $emailAddress) : User
