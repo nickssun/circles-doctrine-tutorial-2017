@@ -15,6 +15,12 @@ Specifically, following sections will be covered:
  5. API interactions with entities
  6. Association mapping
  7. Lazy loading
+ 8. Transactions
+     a. splitting writes and reads
+     b. introducing a command bus
+ 9. Locking
+ 10. Caching
+ 11. Go SQL
 
 ## The domain
 
