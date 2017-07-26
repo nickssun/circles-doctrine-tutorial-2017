@@ -21,6 +21,7 @@ Specifically, following sections will be covered:
  9. Locking
  10. Caching
  11. Go SQL
+ 12. Value Objects
 
 ## The domain
 
