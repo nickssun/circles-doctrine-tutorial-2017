@@ -38,6 +38,5 @@ final class DoctrineUsers implements Users
     public function store(User $user) : void
     {
         $this->manager->persist($user);
-        $this->manager->flush();
     }
 }

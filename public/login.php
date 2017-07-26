@@ -10,8 +10,12 @@ $entityManager = require __DIR__ . '/../bootstrap.php';
 
 $users = new DoctrineUsers($entityManager, $entityManager->getRepository(User::class));
 
-$user = $users->get($_POST['emailAddress']);
+$user = null;
 
-$user->login($_POST['password'], function (string $password, string $hash) : bool { return password_verify($password, $hash); });
+$entityManager->transactional(function () use ($users, & $user) {
+    $user = $users->get($_POST['emailAddress']);
+
+    $user->login($_POST['password'], function (string $password, string $hash) : bool { return password_verify($password, $hash); });
+});
 
 var_dump($user);
