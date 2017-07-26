@@ -19,7 +19,7 @@ final class FilesystemUsers implements Users
 
     public function has(string $emailAddress) : bool
     {
-        return unserialize(file_get_contents($this->directory . '/' . base64_encode($emailAddress))) instanceof User;
+        return file_exists($this->directory . '/' . base64_encode($emailAddress));
     }
 
     public function get(string $emailAddress) : User
