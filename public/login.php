@@ -9,3 +9,5 @@ $user = $users->get($_POST['emailAddress']);
 $user->login($_POST['password'], function (string $password, string $hash) : bool { return password_verify($password, $hash); });
 
 var_dump($user);
+
+var_dump('test00');
